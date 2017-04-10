@@ -1,4 +1,3 @@
-                              
 ├── data
 │   ├── cascades                            用来存放haar分类器
 │   │   └── haarcascade_frontalface_alt.xml
