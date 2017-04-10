@@ -6,11 +6,11 @@ Ubuntu16.04LTS—–其实其他的版本也可以，这里要求不是太苛刻
 python2.7—-本人使用的是python2.7，毕竟人家还可以在支持10年，就讲究的先用着，
 
 MySQLdb ——-python下的Mysql包
-
+```java  
 sudo apt-get install python-pip
 sudo apt-get install libmysqlclient-dev
 pip install mysql-python
-
+```
 OpenCV 3.2.0——-关于版本的使用当然是越稳定越好，关于如何安装OpenCV，这里就简单的说一下下，毕竟没有它，后面的代码也运行不了，
 
 安装的依赖包:
