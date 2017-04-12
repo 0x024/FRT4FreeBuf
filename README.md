@@ -1,7 +1,7 @@
 
 [![Python 2.6|2.7](https://img.shields.io/badge/Python-2.7.*-brightgreen.svg)](https://www.python.org/downloads/)
 
-![image](https://github.com/0x024/FRT/blob/master/data/temp/Selection_015.png
+![image](https://github.com/0x024/FRT/blob/master/data/temp/Selection_015.png)
 
 
 环境搭建
