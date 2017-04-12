@@ -56,11 +56,13 @@ ippicv_linux_20151201.tgz，
       
       2：需要将./face/Dbconnect.py中的数据库信息换成自己的
 
+执行
 ```java
 python import.py   #将保存在./data/face_import/目录下的图片特征经分析后，将图片信息导入数据库
 ```
 ```java
 python img_face.py   #将需要识别的图片放在./data/img_search/下。运行即可（可放置多张）
 ```
-```javapython can_face.py   #进行实时人脸识别，可多张脸一起时别
+```java
+python can_face.py   #进行实时人脸识别，可多张脸一起时别
 ```
