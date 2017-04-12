@@ -46,6 +46,14 @@ ippicv_linux_20151201.tgz，
 ```
 需要挂代理，，关于如何在ubuntu上安装shadowsocks科学上网，我的博客也有写过，
 
+运行前，
+
+      1：需要将./face/FaceAPI.py中的api_key和api_secret换成你的
+
+      3：需要在搭建的MYSQL中搭建一个FRT数据库，并且事先创建一个表，可任意设置！
+      
+      2：需要将./face/Dbconnect.py中的数据库信息换成自己的
+
 ```java
 python import.py   #将保存在./data/face_import/目录下的图片特征经分析后，将图片信息导入数据库
 ```
