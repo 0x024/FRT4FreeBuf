@@ -70,10 +70,10 @@ ippicv_linux_20151201.tgz，
 
 
 ```
-python import.py   #将保存在./data/import/目录下的图片特征经分析后，将图片信息导入数据库
+python import.py   #将保存在./data/import/目录下的图片特征经分析后，将图片信息导入数据库，只可单人照片，且要求图片清晰度较高
 ```
 ```
-python search.py   #将需要识别的图片放在./data/search/下。运行即可（可放置多张）
+python search.py   #将需要识别的图片放在./data/search/下。完成后保存在本目录下，（可放置多张）
 ```
 ```
 python cam.py   #进行实时人脸识别，可多张脸一起时别
