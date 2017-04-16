@@ -1,6 +1,6 @@
 ## 0x01 环境:
 [![](https://img.shields.io/badge/Ubuntu-16.04LTS-brightgreen.svg)]()
-[![](https://img.shields.io/badge/Python-2.7.*-brightgreen.svg)]()
+[![](https://img.shields.io/badge/Python-2.7-brightgreen.svg)]()
 [![](https://img.shields.io/badge/OpenCV-3.2.0-brightgreen.svg)]()
 [![](https://img.shields.io/badge/Mysql-5.7.*-brightgreen.svg)]()
 [![](https://img.shields.io/badge/phpmyadmin-*-brightgreen.svg)]()
