@@ -1,4 +1,4 @@
-## 环境
+## 0x01 环境:
 [![](https://img.shields.io/badge/Ubuntu-16.04LTS-brightgreen.svg)]()
 [![](https://img.shields.io/badge/Python-2.7.*-brightgreen.svg)]()
 [![](https://img.shields.io/badge/OpenCV-3.2.0-brightgreen.svg)]()
@@ -45,7 +45,7 @@ ippicv_linux_20151201.tgz，
 需要挂代理，，关于如何在ubuntu上安装shadowsocks科学上网，我的博客也有写过，
 
 
-## 目录树
+## 0x02 目录树:
 ![image](https://github.com/0x024/FRT4FreeBuf/blob/master/data/temp/Selection_015.png)
 
 ```
@@ -56,12 +56,12 @@ ippicv_linux_20151201.tgz，
 	需要将./face/Dbconnect.py中的数据库信息换成自己的
 ```
 
-执行
+## 0x03 执行:
 ```java
-python import.py   #将保存在./data/face_import/目录下的图片特征经分析后，将图片信息导入数据库
+python import.py   #将保存在./data/import/目录下的图片特征经分析后，将图片信息导入数据库
 ```
 ```java
-python search.py   #将需要识别的图片放在./data/img_search/下。运行即可（可放置多张）
+python search.py   #将需要识别的图片放在./data/search/下。运行即可（可放置多张）
 ```
 ```java
 python cam.py   #进行实时人脸识别，可多张脸一起时别
