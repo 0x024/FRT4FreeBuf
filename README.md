@@ -60,9 +60,11 @@ ippicv_linux_20151201.tgz，
 运行前，
 
 	需要将./face/FaceAPI.py中的api_key和api_secret换成你的
+	需要将./face/FaceAPI.py中的outer_id设置成自己喜欢的标识
 	需要在搭建的MYSQL中创建一个FRT数据库，并且事先在FRT中创建一个表，表名和值可任意设置！
 	需要将./face/Dbconnect.py中的数据库信息换成自己的
 	需要将所有的图片ID设置成12位数字
+	如果需要重新识别同一张照片，需要.data/log/search.log 删除掉即可
 ```
 
 

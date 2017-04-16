@@ -6,7 +6,6 @@ import shutil
 import time
 from face import DBConnect
 from face import FaceAPI
-outer_id="0x024"
 
 reload(sys)
 sys.setdefaultencoding('utf8')
@@ -66,7 +65,7 @@ def detect(filename):
 		img = cv2.rectangle(img,(x,y),(x+w,y+h),(0,255,255),3)
 		f = cv2.resize(gray[y:y+h, x:x+w], (200, 200))
 		cv2.imwrite('./data/search/{}/{}.pgm'.format(filesdir,count), f)
-		result=FaceAPI.searchItoI(image_file='./data/search/{}/{}.pgm'.format(filesdir,count),outer_id="{}".format(outer_id))
+		result=FaceAPI.searchItoI(image_file='./data/search/{}/{}.pgm'.format(filesdir,count))
 		if len(result)==4:
 			break
 		if result["results"][0]["confidence"] >= 80.00:

@@ -6,7 +6,6 @@ import subprocess
 from face import FaceAPI
 from face import DBConnect
 
-outer_id="0x024"
 reload(sys)
 sys.setdefaultencoding('utf8')
 conn = DBConnect.dbconnect()
@@ -17,7 +16,7 @@ if not os.path.exists("./data/log/import.log"):
 
 def creat_faceset():
 	cur.execute("select face_token from face_data")
-	result=FaceAPI.facesetcreate(outer_id='{}'.format(outer_id))
+	result=FaceAPI.facesetcreate()
 	column=cur.fetchall()
 	a=zip(*column)
 	a=list(a[0])
@@ -31,7 +30,7 @@ def creat_faceset():
 			with open("./data/log/import.log",'a') as f:
 				f.write(i)
 			print i
-			result=FaceAPI.facesetaddface(outer_id='{}'.format(outer_id),face_tokens=i)
+			result=FaceAPI.facesetaddface(face_tokens=i)
 			print result
 def create_table():
 	cur.execute("show tables")
@@ -77,7 +76,7 @@ def get_ID_name(dir,topdown=True):
 			print("******************************************")
 			check_stuID(ID)
 def main():
-	FaceAPI.facesetdelete(outer_id="{}".format(outer_id),check_empty=0)
+	FaceAPI.facesetdelete(check_empty=0)
 	create_table()
 	get_ID_name('./data/import')
 	cur.execute("delete from `face_data` where ID=0;")

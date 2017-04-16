@@ -1,8 +1,9 @@
 import os
 import json
 from subprocess import Popen,PIPE
-api_key="####"
-api_secret="####"
+api_key="sYVKydxGakOqX0tL-pw99CFI4WB1523s"
+api_secret="gCdp_hIlgdbnUhcvCv61znzOF53-32hA"
+outer_id="141402060900"
 path='./data/log'
 
 def detect(image_file,return_landmark=0):
@@ -75,7 +76,7 @@ def compareItoT(image_file,face_token):
 #   print"confidence:{}".format(confidence)
 
 
-def searchTtoI(face_token,outer_id,return_result_count=1):
+def searchTtoI(face_token,return_result_count=1):
     result=Popen('curl -X POST "https://api-cn.faceplusplus.com/facepp/v3/search" -F \
         "api_key={api_key}" -F \
         "api_secret={api_secret}" -F \
@@ -98,7 +99,7 @@ def searchTtoI(face_token,outer_id,return_result_count=1):
 
 
 
-def searchItoI(image_file,outer_id,return_result_count=1):
+def searchItoI(image_file,return_result_count=1):
     result=Popen('curl -X POST "https://api-cn.faceplusplus.com/facepp/v3/search" -F \
         "api_key={api_key}" -F \
         "api_secret={api_secret}" -F \
@@ -116,16 +117,16 @@ def searchItoI(image_file,outer_id,return_result_count=1):
     os.remove('{path}/search.json'.format(path=path))
     return result
 
-if __name__ == '__main__':
-    result=searchItoI(image_file="../data/temp/75.pgm",outer_id="141400000000")
-    print result
+# if __name__ == '__main__':
+#     result=searchItoI(image_file="../data/temp/75.pgm",outer_id="141400000000")
+#     print result
 
 
 
 
 
 
-def facesetcreate(outer_id):
+def facesetcreate():
     result=Popen('curl -X POST "https://api-cn.faceplusplus.com/facepp/v3/faceset/create" -F \
         "api_key={api_key}" -F \
         "api_secret={api_secret}" -F \
@@ -148,7 +149,7 @@ def facesetcreate(outer_id):
 
 
 
-def facesetaddface(outer_id,face_tokens):
+def facesetaddface(face_tokens):
     result=Popen('curl -X POST "https://api-cn.faceplusplus.com/facepp/v3/faceset/addface" -F \
         "api_key={api_key}" -F \
         "api_secret={api_secret}" -F \
@@ -170,7 +171,7 @@ def facesetaddface(outer_id,face_tokens):
 
 
 
-def facesetremoveface(outer_id,face_tokens):
+def facesetremoveface(face_tokens):
     result=Popen('curl -X POST "https://api-cn.faceplusplus.com/facepp/v3/faceset/removeface" -F \
         "api_key={api_key}" -F \
         "api_secret={api_secret}" -F \
@@ -192,7 +193,7 @@ def facesetremoveface(outer_id,face_tokens):
 
 
 
-def facesetgetdetail(outer_id):
+def facesetgetdetail():
     result=Popen('curl -X POST "https://api-cn.faceplusplus.com/facepp/v3/faceset/getdetail" -F \
         "api_key={api_key}" -F \
         "api_secret={api_secret}" -F \
@@ -212,7 +213,7 @@ def facesetgetdetail(outer_id):
 #   result=facesetgetdetail(outer_id="11")
 #   print result
 
-def facesetdelete(outer_id,check_empty=1):
+def facesetdelete(check_empty=1):
     global confidence
     result=Popen('curl -X POST "https://api-cn.faceplusplus.com/facepp/v3/faceset/delete" -F \
         "api_key={api_key}" -F \

@@ -5,7 +5,6 @@ import sys
 import shutil
 from face import FaceAPI
 from face import DBConnect
-outer_id="0x024"
 
 reload(sys)
 sys.setdefaultencoding('utf8')
@@ -36,7 +35,7 @@ def video():
 
 				f=cv2.resize(gray[y:y+h,x:x+w],(200,200))
 				cv2.imwrite('./data/temp/temp.pgm',f)
-				result=FaceAPI.searchItoI('./data/temp/temp.pgm',outer_id="{}".format(outer_id))
+				result=FaceAPI.searchItoI(image_file='./data/temp/temp.pgm')
 				if len(result)==4:
 					break			
 				face_token=result["results"][0]["face_token"]
@@ -46,7 +45,7 @@ def video():
 				ft.putText(img=img,text=detail[1],org=(x,y-10),fontHeight=60,line_type=cv2.LINE_AA,color=(0,255,165),thickness=2,bottomLeftOrigin=True)
 				print count
 			count +=1
-		cv2.namedWindow("image",cv2.WINDOW_AUTOSIZE)
+		cv2.namedWindow("image",cv2.WINDOW_NORMAL)
 		cv2.imshow("image",frame)
 		if cv2.waitKey(1000 / 12)&0xff==ord("q"):
 			break
