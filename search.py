@@ -13,13 +13,13 @@ sys.setdefaultencoding('utf8')
 conn = DBConnect.dbconnect()
 cur = conn.cursor()
 
-if not os.path.exists("./data/log/img_search.log"):
-	os.mknod('./data/log/img_search.log')
+if not os.path.exists("./data/log/search.log"):
+	os.mknod('./data/log/search.log')
 
 def main():
 	global i,filesdir
-	fileList=filelist('./data/img_search/')
-	with open('./data/log/img_search.log','r') as f:
+	fileList=filelist('./data/search/')
+	with open('./data/log/search.log','r') as f:
 		content=f.read()
 	for i in fileList:
 		if i in content:
@@ -28,11 +28,11 @@ def main():
 		if i not in content:
 			filesdir1=i.split('/')[3]
 			filesdir=i.split('/')[3].split('.')[0]
-			if not os.path.exists('./data/img_search/{}'.format(filesdir)):
-				os.makedirs('./data/img_search/{}/'.format(filesdir))
-				shutil.copyfile('./data/img_search/{}'.format(filesdir1),'./data/img_search/{}/{}'.format(filesdir,filesdir1))
+			if not os.path.exists('./data/search/{}'.format(filesdir)):
+				os.makedirs('./data/search/{}/'.format(filesdir))
+				shutil.copyfile('./data/search/{}'.format(filesdir1),'./data/search/{}/{}'.format(filesdir,filesdir1))
 			detect(i)
-			with open("./data/log/img_search.log",'a') as f:
+			with open("./data/log/search.log",'a') as f:
 				f.write(i)
 def filelist(dir,topdown=True):
 	fileList = [] 
@@ -65,8 +65,8 @@ def detect(filename):
 	for (x,y,w,h) in faces:
 		img = cv2.rectangle(img,(x,y),(x+w,y+h),(0,255,255),3)
 		f = cv2.resize(gray[y:y+h, x:x+w], (200, 200))
-		cv2.imwrite('./data/img_search/{}/{}.pgm'.format(filesdir,count), f)
-		result=FaceAPI.searchItoI(image_file='./data/img_search/{}/{}.pgm'.format(filesdir,count),outer_id="{}".format(outer_id))
+		cv2.imwrite('./data/search/{}/{}.pgm'.format(filesdir,count), f)
+		result=FaceAPI.searchItoI(image_file='./data/search/{}/{}.pgm'.format(filesdir,count),outer_id="{}".format(outer_id))
 		if len(result)==4:
 			break
 		if result["results"][0]["confidence"] >= 80.00:
