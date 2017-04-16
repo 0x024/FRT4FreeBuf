@@ -1,9 +1,9 @@
 import os
 import json
 from subprocess import Popen,PIPE
-api_key="sYVKydxGakOqX0tL-pw99CFI4WB1523s"
-api_secret="gCdp_hIlgdbnUhcvCv61znzOF53-32hA"
-outer_id="141402060900"
+api_key="0x024"
+api_secret="0x024"
+outer_id="0x024"
 path='./data/log'
 
 def detect(image_file,return_landmark=0):
