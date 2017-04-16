@@ -94,7 +94,7 @@ def searchTtoI(face_token,return_result_count=1):
     return result
 
 # if __name__ == '__main__':
-#   result=searchTtoI(face_token="f298edb8c094c5ac2883413320d8ef7f",outer_id="141400000000")
+#   result=searchTtoI(face_token="f298edb8c094c5ac2883413320d8ef7f")
 #   print result
 
 
@@ -118,7 +118,7 @@ def searchItoI(image_file,return_result_count=1):
     return result
 
 # if __name__ == '__main__':
-#     result=searchItoI(image_file="../data/temp/75.pgm",outer_id="141400000000")
+#     result=searchItoI(image_file="../data/temp/75.pgm")
 #     print result
 
 
@@ -143,7 +143,7 @@ def facesetcreate():
 
 
 # if __name__ == '__main__':
-#   result=facesetcreate(outer_id='11')
+#   result=facesetcreate()
 #   print result
 
 
@@ -166,7 +166,7 @@ def facesetaddface(face_tokens):
     return result 
 
 # if __name__ == '__main__':
-#   result=facesetaddface(outer_id="11",face_tokens="cae2e796ad38737a5006fde10b529c32")
+#   result=facesetaddface(face_tokens="cae2e796ad38737a5006fde10b529c32")
 #   print result
 
 
@@ -188,7 +188,7 @@ def facesetremoveface(face_tokens):
     return result 
 
 # if __name__ == '__main__':
-    # result=facesetremoveface(outer_id="11",face_tokens="cae2e796ad38737a5006fde10b529c32")
+    # result=facesetremoveface(face_tokens="cae2e796ad38737a5006fde10b529c32")
     # print result
 
 
@@ -210,7 +210,7 @@ def facesetgetdetail():
 
 
 # if __name__ == '__main__':
-#   result=facesetgetdetail(outer_id="11")
+#   result=facesetgetdetail()
 #   print result
 
 def facesetdelete(check_empty=1):
@@ -231,7 +231,7 @@ def facesetdelete(check_empty=1):
     return result 
 
 # if __name__ == '__main__':
-#   result=facesetdelete(outer_id="141400000000",check_empty=0)
+#   result=facesetdelete(check_empty=0)
 #   print result
 
 
