@@ -60,6 +60,7 @@ ippicv_linux_20151201.tgz，
 运行前，
 
 	需要将./face/FaceAPI.py中的api_key和api_secret换成你的
+	(为了便于您测试,我以将我的key放在里面，为了防止多人使用outer_id冲突，希望您后期换成自己的)
 	需要将./face/FaceAPI.py中的outer_id设置成自己喜欢的标识
 	需要在搭建的MYSQL中创建一个FRT数据库，并且事先在FRT中创建一个表，表名和值可任意设置！
 	需要将./face/Dbconnect.py中的数据库信息换成自己的
