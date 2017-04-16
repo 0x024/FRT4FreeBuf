@@ -6,6 +6,11 @@
 [![](https://img.shields.io/badge/phpmyadmin-*-brightgreen.svg)]()
 [![](https://img.shields.io/badge/ShadowSocks-Linux-brightgreen.svg)]()
 
+```
+curl安装：
+	sudo apt-get install curl
+```
+
 ```python
 MySQLdb安装：
       sudo apt-get install python-pip     
@@ -55,17 +60,17 @@ ippicv_linux_20151201.tgz，
 运行前，
 
 	需要将./face/FaceAPI.py中的api_key和api_secret换成你的
-	需要在搭建的MYSQL中搭建一个FRT数据库，并且事先创建一个表，表名和值可任意设置！
+	需要在搭建的MYSQL中创建一个FRT数据库，并且事先在FRT中创建一个表，表名和值可任意设置！
 	需要将./face/Dbconnect.py中的数据库信息换成自己的
 ```
 
 
-```java
+```
 python import.py   #将保存在./data/import/目录下的图片特征经分析后，将图片信息导入数据库
 ```
-```java
+```
 python search.py   #将需要识别的图片放在./data/search/下。运行即可（可放置多张）
 ```
-```java
+```
 python cam.py   #进行实时人脸识别，可多张脸一起时别
 ```
