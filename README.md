@@ -65,7 +65,7 @@ ippicv_linux_20151201.tgz，
 	需要在搭建的MYSQL中创建一个FRT数据库，并且事先在FRT中创建一个表，表名和值可任意设置！
 	需要将./face/Dbconnect.py中的数据库信息换成自己的
 	需要将所有的图片ID设置成12位数字
-	如果需要重新识别同一张照片，需要.data/log/search.log 删除掉即可
+	如果需要重新导入或者识别同一张照片，需要在.data/log/*.log 删除对应log即可
 ```
 
 
