@@ -7,7 +7,7 @@
 [![](https://img.shields.io/badge/ShadowSocks-Linux-brightgreen.svg)]()
 
 ```python
-MySQLdb安装ung如下：
+MySQLdb安装：
       sudo apt-get install python-pip     
       sudo apt-get install libmysqlclient-dev
       pip install mysql-python
@@ -48,6 +48,9 @@ ippicv_linux_20151201.tgz，
 ## 0x02 目录树:
 ![image](https://github.com/0x024/FRT4FreeBuf/blob/master/data/temp/Selection_015.png)
 
+
+## 0x03 执行:
+
 ```
 运行前，
 
@@ -56,7 +59,7 @@ ippicv_linux_20151201.tgz，
 	需要将./face/Dbconnect.py中的数据库信息换成自己的
 ```
 
-## 0x03 执行:
+
 ```java
 python import.py   #将保存在./data/import/目录下的图片特征经分析后，将图片信息导入数据库
 ```
