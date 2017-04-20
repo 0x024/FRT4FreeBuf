@@ -1,3 +1,4 @@
+# -*- coding:utf-8 -*-
 import os
 import json
 from subprocess import Popen,PIPE
@@ -23,9 +24,9 @@ def detect(image_file,return_landmark=0):
     os.remove('{path}/detect.json'.format(path=path))
     return result
 
-# if __name__ == '__main__':
-#   result=detect(image_file="../data/wenzhang.jpg",return_landmark=1)
-#   print result
+if __name__ == '__main__':
+  result=detect(image_file="../data/import/100000000001.普京.png",return_landmark=1)
+  print result
 
 
 
