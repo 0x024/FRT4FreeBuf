@@ -19,11 +19,11 @@
 
 
 ```
-python import.py   #将保存在./data/import/目录下的图片特征经分析后，将图片信息导入数据库，只可单人照片，且要求图片清晰度较高
+python import.py   #将保存在./data/import/目录下的图片信息导入数据库
 ```
 ```
-python search.py   #将需要识别的图片放在./data/search/下。完成后保存在本目录下，（可放置多张）
+python search.py   #识别放在./data/search/下的图片。
 ```
 ```
-python cam.py   #进行实时人脸识别，可多张脸一起时别
+python cam.py   #进行摄像头实时人脸识别，
 ```
