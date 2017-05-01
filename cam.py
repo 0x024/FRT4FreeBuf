@@ -31,7 +31,7 @@ def video():
 		faces=face_cascade.detectMultiScale(gray,1.3,5)
 		for(x,y,w,h) in faces:
 			img =cv2.rectangle(frame,(x,y),(x+w,y+h),(0,255,255),2)
-			if count%10==1:
+			if count%5<2:
 
 				f=cv2.resize(gray[y:y+h,x:x+w],(200,200))
 				cv2.imwrite('./data/temp/temp.pgm',f)
